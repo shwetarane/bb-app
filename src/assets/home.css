@@ -1,0 +1,6 @@
+.home__jumbotron{
+  border: 1px solid;
+  background-image: url('./background.jpg');
+  background-clip:padding-box;
+  color:azure;
+}
