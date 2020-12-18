@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 export default function Character({ character }) {
 
@@ -13,7 +13,7 @@ export default function Character({ character }) {
         <td>
         {/* Parse through each characters ocupation array to print out their occuplation */}
         {character.occupation.map((occupation) =>{
-          return (<li>{occupation}</li>)
+          return (<li key={occupation}>{occupation}</li>)
         })}
         </td>
         <td><img className="d-none d-md-block" height="100" alt={character.img} src={character.img} /></td>

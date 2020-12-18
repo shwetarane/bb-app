@@ -40,8 +40,7 @@ function App() {
         <h1 className="mb-4">Breaking Bad Characters</h1>
         <p>Look up your favorite Breaking bad characters...</p>
       </Col>
-      <Col>
-      </Col>
+      
     </Row> 
     </Jumbotron>
       <SearchForm params={params} onParamChange={handleParamChange} />
@@ -60,8 +59,8 @@ function App() {
         </tr>
       </thead>
       {/* parse through the json reponse to display content on screen */}
-        {characters.map(character => {
-          return <Character key={character.id} character={character} />
+        {characters.map((character,idx) => {
+          return <Character key={idx} character={character} />
         })}
         </Table>
         {renderFooter}

@@ -34,8 +34,8 @@ export default function useFetchCharacters(params) {
     }).then(res => {
       dispatch({ type: ACTIONS.GET_DATA, payload: { characters: res.data } }) 
       console.log(res.data)
-    }).catch(e => {
-      dispatch({ type: ACTIONS.ERROR, payload: { error: e } }) 
+    }).catch(error => {
+      dispatch({ type: ACTIONS.ERROR, payload: { error: error } }) 
     })
     
 
